@@ -71,8 +71,7 @@ for mean in means:
 					plt.xlabel('Packet Loss (%)')
 					plt.ylabel('Throughput (Mbps)')
 					plt.xlim(min(losses_n) - 1, max(losses_n) + 1)
-					plt.title('Throughput Comparison against packet loss: Delay ' + str(mean) + ' ms, Jitter ' + str(variance) +
-							  ' ms, Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
+					plt.title('Throughput Comparison against packet loss: Delay ' + str(mean) + ' ms, Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
 					rutafigura = os.path.normpath(plotfolder + '/BWVSLOSSAVGPLOT_' + str(
@@ -88,8 +87,7 @@ for mean in means:
 					plt.xlabel('Packet Loss (%)')
 					plt.ylabel('Overhead (MB)')
 					plt.xlim(min(losses_n) - 1, max(losses_n) + 1)
-					plt.title('Overhead Comparison against packet loss: Delay ' + str(mean) + ' ms, Jitter ' + str(variance) +
-							  ' ms, Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
+					plt.title('Overhead Comparison against packet loss: Delay ' + str(mean) + ' ms Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
 					rutafigura = os.path.normpath(plotfolder + '/OHVSLOSSAVGPLOT_' + str(
@@ -168,8 +166,7 @@ for variance in variances:
 					plt.xlabel('Delay (ms)')
 					plt.ylabel('Throughput (Mbps)')
 					plt.xlim(min(means_n) - 1, max(means_n) + 1)
-					plt.title('Throughput Comparison vs delay: Ploss ' + str(loss) + '%, Jitter ' + str(variance) +
-							  ' ms, Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
+					plt.title('Throughput Comparison vs delay: loss ' + str(loss) + ' Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
 					rutafigura = os.path.normpath(plotfolder + '/BWVSDELSAVGPLOT_' + str(
@@ -185,8 +182,7 @@ for variance in variances:
 					plt.xlabel('Delay (ms)')
 					plt.ylabel('Overhead (MB)')
 					plt.xlim(min(means_n) - 1, max(means_n) + 1)
-					plt.title('Overhead Comparison vs delay: Ploss ' + str(loss) + '%, ms, Jitter ' + str(variance) +
-							  ' ms, Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
+					plt.title('Overhead Comparison vs delay: loss ' + str(loss) + ' Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
 					rutafigura = os.path.normpath(plotfolder + '/OHVSDELSAVGPLOT_' + str(
@@ -202,8 +198,7 @@ for variance in variances:
 					plt.xlabel('Delay (ms)')
 					plt.ylabel('Total time for transfer (s)')
 					plt.xlim(min(means_n) - 1, max(means_n) + 1)
-					plt.title('Time transfer Comparison vs delay: Ploss ' + str(loss) + '%, ms, Jitter ' + str(variance) +
-							  ' ms, Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
+					plt.title('Time transfer Comparison vs delay: loss ' + str(loss) + ' Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
 					rutafigura = os.path.normpath(plotfolder + '/TIVSDELSAVGPLOT_' + str(
@@ -264,8 +259,7 @@ for mean in means:
 					plt.xlabel('Bandwidth (Mbps)')
 					plt.ylabel('Throughput (Mbps)')
 					plt.xlim(min(bandwidths_n) - 1, max(bandwidths_n) + 1)
-					plt.title('Throughput Comparison vs Bandwidth: Ploss ' + str(loss) + '%, Jitter ' + str(
-						variance) + ' ms, Delay ' + str(mean) + ' ms, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
+					plt.title('Throughput Comparison vs Bandwidth: loss ' + str(loss) + ' Delay ' + str(mean) + ' ms, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
 					rutafigura = os.path.normpath(plotfolder + '/BWVSBWSAVGPLOT_' + str(
@@ -281,8 +275,7 @@ for mean in means:
 					plt.xlabel('Bandwidth (Mbps)')
 					plt.ylabel('Overhead (MB)')
 					plt.xlim(min(bandwidths_n) - 1, max(bandwidths_n) + 1)
-					plt.title('Overhead Comparison vs delay: Ploss ' + str(loss) + '%, ms, Jitter ' + str(variance) +
-							  ' ms, Delay ' + str(mean) + ' ms, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
+					plt.title('Overhead Comparison vs delay: loss ' + str(loss) + ' Delay ' + str(mean) + ' ms, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
 					rutafigura = os.path.normpath(plotfolder + '/OHVSBWSAVGPLOT_' + str(
@@ -298,8 +291,7 @@ for mean in means:
 					plt.xlabel('Bandwidth (Mbps)')
 					plt.ylabel('Total time for transfer (s)')
 					plt.xlim(min(bandwidths_n) - 1, max(bandwidths_n) + 1)
-					plt.title('Time transfer Comparison vs delay: Ploss ' + str(loss) + '%, ms, Jitter ' + str(
-						variance) + ' ms, Delay ' + str(mean) + ' ms, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
+					plt.title('Time transfer Comparison vs delay: loss ' + str(loss) + ' Delay ' + str(mean) + ' ms, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
 					rutafigura = os.path.normpath(plotfolder + '/TIVSBWSAVGPLOT_' + str(
@@ -361,7 +353,7 @@ for mean in means:
 					plt.xlabel('Jitter (ms)')
 					plt.ylabel('Throughput (Mbps)')
 					plt.xlim(min(variances_n) - 1, max(variances_n) + 1)
-					plt.title('Throughput Comparison vs delay: Ploss ' + str(loss) + '%, Delay ' + str(mean) +
+					plt.title('Throughput Comparison vs delay: loss ' + str(loss) + '%, Delay ' + str(mean) +
 							  ' ms, Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
@@ -378,7 +370,7 @@ for mean in means:
 					plt.xlabel('Jitter (ms)')
 					plt.ylabel('Overhead (MB)')
 					plt.xlim(min(variances_n) - 1, max(variances_n) + 1)
-					plt.title('Overhead Comparison vs delay: Ploss ' + str(loss) + '%, ms, Delay ' + str(mean) +
+					plt.title('Overhead Comparison vs delay: loss ' + str(loss) + '%, ms, Delay ' + str(mean) +
 							  ' ms, Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)
@@ -395,7 +387,7 @@ for mean in means:
 					plt.xlabel('Jitter (ms)')
 					plt.ylabel('Total time for transfer (s)')
 					plt.xlim(min(variances_n) - 1, max(variances_n) + 1)
-					plt.title('Time transfer Comparison vs delay: Ploss ' + str(loss) + '%, ms, Delay ' + str(mean) +
+					plt.title('Time transfer Comparison vs delay: loss ' + str(loss) + '%, ms, Delay ' + str(mean) +
 							  ' ms, Bandwidth ' + str(bandwidth) + ' Mbps, with ' + ('no ' if int(spike) == 0 else '') + 'spikes')
 					plt.legend(bbox_to_anchor=(1.05, 1),
 							   loc=2, borderaxespad=0.)

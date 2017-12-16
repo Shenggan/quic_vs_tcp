@@ -51,7 +51,7 @@ pingCommand = ["/bin/ping", "127.0.0.1", "-c", "1", "-s", "1"]
 # client commands
 tcpClientCommand = "wget -O ./tmp/index.html https://127.0.0.1/" + \
 	testFile + " --no-check-certificate"
-quicClientCommand = "/home/csg/software/proto-quic/src/out/Default/quic_client --host=127.0.0.1 --port=6121 https://www.example.org/ > ./tmp/download"
+quicClientCommand = "/home/csg/software/proto-quic/src/out/Default/quic_client --host=127.0.0.1 --disable-certificate-verification --port=6121 https://www.example.org/ > ./tmp/download"
 quicChromiumCommand = "google-chrome --user-data-dir=/tmp/chrome-profile --no-proxy-server --enable-quic --origin-to-force-quic-on=www.example.org:443 --host-resolver-rules='MAP www.example.org:443 127.0.0.1:6121' https://www.example.org/"
 quicChromiumDownloadFilepath = "/home/csg/Downloads/download"
 

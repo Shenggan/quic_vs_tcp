@@ -117,8 +117,8 @@ for mean in means:
 						))) + 0.5, 0.5), dictionary[1].values(), "x-", linewidth=0.6, label="TCP")
 						plt.xlabel('Time in seconds')
 						plt.ylabel('Throughput (Mbps)')
-						plt.title('Throughput Comparison: Delay ' + mean + ' ms, Jitter ' + variance + ' ms, Bandwidth ' + bandwidth + ' Mbps, PckLoss: ' + loss + '%, with ' + ('no ' if int(spike) == 0 else '') +
-								  'spikes\nQUIC: Duration Std. Deviation: ' + vardelq + ' , Bandwidth Std. Deviation: ' + varbwq + ' \nTCP: Duration Std. Deviation: ' + vardelt + ' , Bandwidth Std. Deviation: ' + varbwt + ' ')
+						plt.title('Throughput Comparison: Delay ' + mean + ' ms, Bandwidth ' + bandwidth + ' Mbps, PckLoss: ' + loss + '%, with ' + ('no ' if int(spike) == 0 else '') +
+								  'spikes\n')
 						plt.legend(bbox_to_anchor=(1.05, 1),
 								   loc=2, borderaxespad=0.)
 						rutafigura = os.path.normpath(
