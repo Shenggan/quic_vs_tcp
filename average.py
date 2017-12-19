@@ -4,30 +4,10 @@ This script averages diferent instances of the same test. By default, each test 
 Run this script after script.py and preprocess.py
 """
 
-"""
-fdf
-(quic/tcp)_(bandwidth)_(ploss)_(delay)_(variance)_(1if spike else 0)_(testnumber)
-
-100Mbps, 1Mbps and 40Mbps
-
-delays mean: 10, 20, 40, 60, 80, 100, 120
-delays variance: 10, 20, 40, 50
-packet loss: 0%, 1.5%, 5%
-"""
-
-
 import os
 import collections
 import numpy as np
 
-
-# means = ['10']
-# variances = ['0']
-# losses = ['0.0']
-# bandwidths = ['100']
-# methods = ['quic', 'tcp']
-# spikes = ['0']
-# testnumber = ['1', '2', '3', '4', '5']
 
 means = ['10', '50']
 variances = ['0']
@@ -37,13 +17,6 @@ methods = ['quic', 'tcp']
 spikes = ['0', '1']
 testnumber = ['1', '2', '3', '4', '5']
 
-# means=['10', '20', '40', '60', '80', '100', '120']
-# variances=['0', '10', '20', '40', '50']
-# losses=['0.0','2.5','5.0']
-# bandwidths=['1','40','100']
-# methods=['quic','tcp']
-# spikes=['0','1']
-# testnumber=['1','2','3','4','5']
 
 pathfile = os.path.normpath('./processed/')
 

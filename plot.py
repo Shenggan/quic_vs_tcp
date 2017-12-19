@@ -15,14 +15,6 @@ methods = ['quic', 'tcp']
 spikes = ['0', '1']
 testnumber = ['1', '2', '3', '4', '5']
 
-# means=['10', '20', '40', '60', '80', '100', '120']
-# variances=['0', '10', '20', '40', '50']
-# losses=['0.0','2.5','5.0']
-# bandwidths=['1','40','100']
-# methods=['quic','tcp']
-# spikes=['0','1']
-# testnumber=['1','2','3','4','5']
-
 
 pathfile = os.path.normpath('./processed/')
 plotfolder = os.path.normpath('./plt/')
