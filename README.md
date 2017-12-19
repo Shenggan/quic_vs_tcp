@@ -39,13 +39,15 @@ For practical, we will use simulate enviroment in **local**. We use *tc netem* a
 #### Experimental Platform
 
 * Hardware
-  | Hardware  |                                          |
-  | --------- | ---------------------------------------- |
-  | Memory    | 16GB                                     |
+
+  | Hardware  | Parameters                                  |
+  | --------- | ----------------------------------------    |
+  | Memory    | 16GB                                        |
   | Processor | Intel® Xeon(R) CPU E3-1230 v5 @ 3.40GHz × 8 |
-  | Disks     | SAMSUNG 850 EVO                          |
+  | Disks     | SAMSUNG 850 EVO                             |
 * Software
-  | Software |                         |
+
+  | Software |      Parameters         |
   | -------- | ----------------------- |
   | OS       | Ubuntu16.04             |
   | OS-type  | 64 bit                  |
@@ -172,9 +174,9 @@ See detail in [env_setup.sh](./scripts/env_setup.sh).
 ### Analysis
 
 * At the cost of higher overhead, QUIC outperforms TCP in terms of time for transfer and average bandwidth used.
-* When high delay, packet loss, and high bandwidth, QUIC will perform much better than TCP including time for transfer and throughout.
+* When high delay, packet loss, and high bandwidth, QUIC will perform much better than TCP including time for transfer and throughput.
 * Under favorable conditions, The QUIC will be more stable than TCP. You can see two picture in section Time series. 
-* Under packet loss, QUIC also surpasses TCP.  When packet loss is 0%, throughout of QUIC is much higher than TCP. When packet loss is 5%, throughout of two protocol is very close, but QUIC is higher still.
+* Under packet loss, QUIC also surpasses TCP.  When packet loss is 0%, throughput of QUIC is much higher than TCP. When packet loss is 5%, throughput of two protocol is very close, but QUIC is higher still.
 * But when jitter happen, TCP can surpasses QUIC. Because the feature of the QUIC, QUIC can't handle the jitter better than TCP. It imply that QUIC is immature and not prefect.
 
 ## Conclusions

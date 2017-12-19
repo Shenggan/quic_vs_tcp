@@ -11,5 +11,4 @@ Contents:
    methods.md
    results.md
    conclusions.md
-   future_work.md
    referance.md
