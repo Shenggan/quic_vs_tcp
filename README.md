@@ -1,6 +1,6 @@
 # QUIC vs TCP
 
-A Survey and Benchmark of QUIC. 
+A Survey and Benchmark of QUIC. Based on [quic-vs-tcp-tls](https://github.com/mgordo/quic-vs-tcp-tls), and thanks for [mgordo](https://github.com/mgordo).
 
 ## Introduction
 
